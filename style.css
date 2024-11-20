@@ -38,14 +38,12 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --spacing-xxxlarge: 3.125rem; /* 50px */
   }
 
-
   /* ------- Container ------ */
 
 .container {
     width: 100%;
     max-width: 1280px;
-    height: 100vh;
-    /* background: #1a1010; */
+    min-height: 100vh;
     margin: auto;
 }
 
@@ -99,17 +97,26 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .hero_section {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 2rem;
     height: 40%;
+    width: 85%;
+    margin: 0 auto;
 }
 
 .profile {
+    background: url(./assets/computer-bg-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     flex: 1;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    color: var(--light);
     gap: 1rem;
+    border-radius: 7px;
     margin: auto;
     padding: 5%;
 }
@@ -121,7 +128,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: flex-start;
     gap: 1rem;
     margin: auto;
-    padding: 5%;
 }
 
 .profile_pic_wrapper img {
