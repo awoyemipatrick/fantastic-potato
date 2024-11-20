@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /**---- Clock ---- */
+
     const timeElement = document.getElementById('time');
     const dateElement = document.getElementById('date');
 
-
-    /**---- Clock ---- */
     function updateTime() {
         const now = new Date();
 
@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateTime, 1000);
     updateTime();
 
+
+    
     /**  ----Hamburger ----  */
     const navWrapper = document.querySelector(".nav_wrapper");
     const openIcon = document.querySelector(".hamburger .open");

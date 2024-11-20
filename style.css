@@ -131,9 +131,7 @@
     display: block;
     cursor: pointer;
   }
-
 }
-
 
 /* ------- Hero Section ------- */
 
@@ -144,7 +142,7 @@
   gap: 2rem;
   height: 40%;
   width: 85%;
-  margin: 0 auto;
+  margin: 1rem auto 4rem auto;
 }
 
 .profile {
@@ -221,13 +219,85 @@
 /**    -----Hero section Media Query-----    **/
 
 @media (max-width: 768px) {
-    .hero_section {
-          flex-direction: column;
-      }
+  .hero_section {
+    flex-direction: column;
+  }
 }
 
+/* ------- Professional details Section ------- */
 
-/* -------  Section ------- */
+.professional_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--light);
+  padding-inline: 7.5%;
+}
 
+.experience {
+  flex: 1;
+}
 
-@media (max-width: 768px) {}
+.career_milestones li article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.profile-highlights {
+  font-size: var(--size-small);
+}
+
+.profile-highlights p {
+  font-weight: 700;
+}
+.profile-highlights i {
+  margin-left: 5px;
+  margin-top: 0.5rem;
+  padding: 0px 5px;
+  background: var(--white);
+  border-radius: 50px;
+}
+
+.line {
+  width: 2px; 
+  height: 250px;
+  background-color: #fff;
+  align-self: flex-end;
+}
+
+.certification {
+  flex: 1;
+}
+
+.cert_profile_highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cert_award_achievement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+
+}
+
+.arrow {
+  transform: rotate(-50deg);
+}
+
+/* ---- Professional Details Media Query --- */
+
+@media (max-width: 768px) {
+  .professional_details {
+    display: block;
+  }
+
+  .line {
+    display: none;
+  }
+}
