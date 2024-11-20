@@ -75,7 +75,7 @@ Organize code for readability and maintainability.
 
 ## font
 
-- **Proxima Nova, sans-serif**
+- **Montserrat, sans-serif**
 
 <!-- 
 # create a new repository on the command line
