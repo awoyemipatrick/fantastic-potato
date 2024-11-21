@@ -145,6 +145,20 @@
   margin: 1rem auto 4rem auto;
 }
 
+.social_wrapper {
+  position: fixed;
+  right: 0;
+  top: 6rem;
+  padding-right: 0.5rem;
+}
+
+.social_wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 .profile {
   background: url(./assets/computer-bg-img.jpg);
   background-size: cover;
@@ -262,7 +276,7 @@
 }
 
 .line {
-  width: 2px; 
+  width: 2px;
   height: 250px;
   background-color: var(--black);
   align-self: flex-end;
@@ -286,7 +300,6 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-
 }
 
 .arrow {
