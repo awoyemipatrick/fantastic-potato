@@ -1,12 +1,3 @@
-* {
-  font-family: var(--font-mont);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-decoration: none;
-}
-
 :root {
   /* Color Palette */
   --primary: #3498db;
@@ -22,14 +13,17 @@
 
   /* Typography */
   --font-mont: "Montserrat", sans-serif;
+  /* https://nekocalc.com/px-to-rem-converter */
   --size-small: 0.75rem; /* 12px */
   --size-medium: 1rem; /* 16px */
   --size-large: 1.5rem; /* 24px */
+
   --weight-normal: 400;
   --weight-bold: 700;
 
   /* Spacing & Sizing */
   /* https://nekocalc.com/px-to-rem-converter */
+  --spacing-xsmall: 0.25rem; /* 4px */
   --spacing-small: 0.5rem; /* 8px */
   --spacing-medium: 1rem; /* 16px */
   --spacing-large: 1.25rem; /* 20px */
@@ -37,6 +31,34 @@
   --spacing-xxlarge: 2rem; /* 32px */
   --spacing-xxxlarge: 3.125rem; /* 50px */
 }
+
+* {
+  font-family: var(--font-mont);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background: url(./assets/escalator.jpg);
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*  ---woman--- Image by <a href="https://pixabay.com/users/merlinlightpainting-19833603/?utm_source=
+link-attribution&utm_medium=referral&utm_
+campaign=image&utm_content=6063087">Merlin Lightpainting</a> from <a href="https://pixabay.com//
+?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=
+6063087">Pixabay</a> */
+
+/* ----Escalator---- Image by <a href="https://pixabay.com/users/activedia-665768/?utm_source=link-attrib
+ution&utm_medium=referral&utm_campaign=image&utm_content=769790">Okan Caliskan</a> from <a href="ht
+tps://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=769790">
+Pixabay</a> */
 
 /* ------- Container ------ */
 
@@ -143,6 +165,50 @@
   height: 40%;
   width: 85%;
   margin: 1rem auto 4rem auto;
+
+  animation: appear linear 4s 2s ease-in-out reverse backwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 2;
+  }
+}
+
+@keyframes identifier {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes circular {
+}
+
+.animates {
+  animation-name: appear linear 4s 2s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .social_wrapper {
@@ -150,6 +216,8 @@
   right: 0;
   top: 6rem;
   padding-right: 0.5rem;
+
+  animation-name: appear linear 4s 2s ease-in-out reverse backwards;
 }
 
 .social_wrapper ul {
@@ -169,11 +237,21 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  color: var(--light);
+  color: var(--white);
   gap: 1rem;
   border-radius: 7px;
   margin: auto;
   padding: 5%;
+  transition: 1s;
+  box-shadow: 0 10px 10px;
+}
+
+.profile:hover {
+  transform: perspective(30px) rotatex(1deg) translateY(30px);
+}
+
+.cta:hover {
+  transform: perspective(50px) rotatex(2deg) translateY(10px);
 }
 
 .cta {
@@ -181,8 +259,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background: rgba(12, 10, 10, 0.8);
   gap: 1rem;
+  padding: 2%;
+  border-radius: 20px;
   margin: auto;
+  transition: 1s;
+  box-shadow: 0 10px 10px;
+  color: var(--white);
+  transform: perspective(30px) rotatex(-0.5deg) translateY(-30px);
 }
 
 .profile_pic_wrapper img {
@@ -240,13 +325,37 @@
 
 /* ------- Professional details Section ------- */
 
+.professional_details_wrapper {
+  position: relative;
+  color: var(--white);
+  opacity: 0.7;
+  margin: 2rem;
+  box-shadow: 0 10px 10px;
+  transition: 1s;
+  border-radius: 50px;
+  padding-inline: 7.5%;
+}
+
+.professional_details_wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: -1;
+}
+
 .professional_details {
+  /* transform: perspective(30px) scale(1.05); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  /* background: var(--light); */
-  padding-inline: 7.5%;
+  transition: 1s;
+  z-index: 10;
 }
 
 .experience {
@@ -278,7 +387,7 @@
 .line {
   width: 2px;
   height: 250px;
-  background-color: var(--black);
+  background-color: var(--light);
   align-self: flex-end;
 }
 
