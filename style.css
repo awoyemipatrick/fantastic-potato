@@ -1,6 +1,7 @@
 :root {
   /* Color Palette */
   --primary: #3498db;
+  --seondary: #ffd60a;
   --black: #000000;
   --vibrant: #e74c3c;
   --tomatoRed: #c0392b;
@@ -95,6 +96,7 @@ Pixabay</a> */
 
 .clock-container {
   font-size: 10px;
+  color: #fff;
 }
 
 .nav_links {
@@ -102,11 +104,11 @@ Pixabay</a> */
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  color: var(--black);
+  /* color: ; */
 }
 
 .nav_links a {
-  color: var(--gray-dark);
+  color: var(--white);
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -129,7 +131,7 @@ Pixabay</a> */
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--white);
+    background-color: var(--dark);
     z-index: 1000;
     padding-top: 5rem;
   }
@@ -141,7 +143,7 @@ Pixabay</a> */
   .nav_links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 3rem;
     padding: 1rem;
   }
 
@@ -425,4 +427,33 @@ Pixabay</a> */
   .line {
     display: none;
   }
+}
+
+/* ---- Portfolio section ----- */
+
+.potfolio_wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.portfolio_contents {
+  margin: 1.5rem auto;
+  padding: 15px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  box-shadow: 0 10px 10px rgba(252, 250, 250, 0);
+}
+
+.portfolio_contents img {
+  width: 250px;
+  /* height: 370px; */
+}
+
+.portfolio_items {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
 }
