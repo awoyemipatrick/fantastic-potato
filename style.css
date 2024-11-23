@@ -289,7 +289,7 @@ Pixabay</a> */
   gap: 1rem;
 }
 
-.cta_btns > button:first-child {
+.cta_btns > a:first-child {
   background: var(--black);
   border: none;
   padding: 0.5rem 1rem;
@@ -297,7 +297,7 @@ Pixabay</a> */
   cursor: pointer;
 }
 
-.cta_btns > button:last-child {
+.cta_btns > a:last-child {
   background: var(--light);
   border: none;
   padding: 0.5rem 1rem;
@@ -307,16 +307,22 @@ Pixabay</a> */
   transition: all 2s;
 }
 
-.cta_btns > button:last-child:hover {
+.cta_btns > a:last-child:hover {
   background: var(--gray-light);
 }
 
-.cta_btns button:first-child a {
+.cta_btns a:first-child button {
   color: var(--light);
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.cta_btns button:last-child a {
+.cta_btns a:last-child button {
   color: var(--black);
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /**    -----Hero section Media Query-----    **/
@@ -527,7 +533,7 @@ Pixabay</a> */
   gap: 0.5rem;
 }
 
-.portfolio_links button {
+.portfolio_links a {
   background-color: #0969da;
   color: #fff;
   border: none;
@@ -538,33 +544,13 @@ Pixabay</a> */
   transition: background-color 0.3s ease;
 }
 
-.portfolio_links button:hover {
+.portfolio_links a:hover {
   background-color: #084ea9;
 }
 
-.portfolio_links a {
+.portfolio_links a button{
   text-decoration: none;
+  background: transparent;
   color: inherit;
-}
-
-
-.pagination {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.pagination div {
-  width: 10px;
-  height: 10px;
-  background-color: #d1d9e0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.pagination div:hover,
-.pagination div.active {
-  background-color: #0969da;
+  border: none;
 }
